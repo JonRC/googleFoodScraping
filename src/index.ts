@@ -33,8 +33,8 @@ const getMenus = async () => {
 
   const restaurantIds = removeDuplicated(duplicatedRestaurantIds);
 
-  const restaurantIdToTest = restaurantIds[5];
-  console.log(restaurantIds);
+  const restaurantIdToTest = restaurantIds[4];
+  console.log({ restaurantIds });
 
   const detailPage = (restaurantId: string) =>
     `https://food.google.com/food/chooseprovider?restaurantId=/g/${restaurantId}&fo_m=EhYSAggBegIgAZoBC1pGRUtJLWVUZGJ3OAE&orderType=1&q=miami&partnerId&sei=Cf-ili97KomBEdOsVVK6YGVz&utm_source=landing`;
@@ -61,7 +61,7 @@ const getMenus = async () => {
 
   const menu = await Promise.all(menuPromise);
 
-  console.log(menu);
+  console.log({ menu });
 
   //We are seeing the browser because it is a test.
   //We will hide it after the tests to improve the performance.
